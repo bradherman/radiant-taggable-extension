@@ -1,3 +1,8 @@
+# UPDATES
+Added basic autocomplete to the extension.  Requires the repeated autocomplete gem -- https://github.com/patshaughnessy/auto_complete
+
+
+
 # Taggable
 
 This is another way to apply tags to objects in your radiant site and retrieve objects by tag. If you're looking at this you will also want to look at the [tags](http://github.com/jomz/radiant-tags-extension/tree) extension, which does a good job of tag-clouding and may be all you need, and at our [library](https://github.com/spanner/radiant-library-extension) which uses this functionality to make an image gallery and document library and may be a useful starting point for other extensions.
