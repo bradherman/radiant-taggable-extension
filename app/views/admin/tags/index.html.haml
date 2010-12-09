@@ -10,8 +10,8 @@
             %th.tag-title Title
           - thead.description_header do
             %th.tag-description Description
-          - thead.usage_header do
-            %th.tag-usage Usage
+          /- thead.usage_header do
+          /  %th.tag-usage Usage
           - thead.modify_header do
             %th.modify{:colspan =>"2"} Modify
 
@@ -28,16 +28,16 @@
               %td.tag-description
                 = tag.description
                 
-            - tbody.usage_cell do
-              %td.tag-usage
-                - if tag.use_count.to_i > 0
-                  = link_to "#{tag.use_count} #{pluralize(tag.use_count.to_i, 'item')}", admin_tag_url(tag)
-                - else
-                  \-
+            /- tbody.usage_cell do
+            /  %td.tag-usage
+            /    - if tag.use_count.to_i > 0
+            /      = link_to "#{tag.use_count} #{pluralize(tag.use_count.to_i, 'item')}", admin_tag_url(tag)
+            /    - else
+            /      = "0 items"
 
             - tbody.modify_cell do
               %td.actions
-                = link_to image('minus') + ' ' + t('remove'), remove_admin_tag_url(tag), :class => "action"
+                = link_to image('minus') + ' ' + t('remove'), remove_admin_tag_url(tag), :class => "action", :confirm=>"Are you sure?"
  
 - render_region :bottom do |bottom|
   - bottom.new_button do
