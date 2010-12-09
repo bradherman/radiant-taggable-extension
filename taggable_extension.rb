@@ -2,6 +2,10 @@ class TaggableExtension < Radiant::Extension
   version "1.2.1"
   description "General purpose tagging and retrieval extension: more versatile but less focused than the tags extension"
   url "http://github.com/spanner/radiant-taggable-extension"
+  
+  extension_config do |config|
+    config.gem "repeated_auto_complete"
+  end
     
   def activate
     ActiveRecord::Base.send :include, TaggableModel                     # provide is_taggable for everything but don't call it for anything
