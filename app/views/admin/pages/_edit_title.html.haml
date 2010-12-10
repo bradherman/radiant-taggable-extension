@@ -1,4 +1,4 @@
-= javascript_include_tag "controls"
+= javascript_include_tag "admin/controls"
 - content_for :page_css do
   :sass 
     p.title
@@ -28,12 +28,7 @@
   %p.keywords
     %label{:for=>"page_keywords"}
       Tags
-    /= fields.text_field :keywords, :class => 'textbox'
-    / need controls.js
-    = text_field_with_auto_complete :page, :keywords, { :size => 50, :class => 'textbox' }, { :url => "/admin/tags.js", :method => :get, :param_name => 'search' }
-    /
-    /= text_field_with_auto_complete :keywords, :tags, { :size => 15 }, { :url => "/admin/tags.js", :method => :get, :param_name => 'search', :class => "textbox" }
-    
+    = text_field_with_auto_complete :page, :keywords, { :size => 50, :class => 'textbox' }, { :url => '/admin/tags.js', :method => :get, :param_name => 'search' }
   %p.title
     %label{:for=>"page_title"}= t('page_title')
     = fields.text_field :title, :class => 'textbox', :maxlength => 255
