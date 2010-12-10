@@ -32,6 +32,9 @@ class TaggableExtension < Radiant::Extension
         admin.tabs['Tags'].add_link('new tag', '/admin/tags/new')
       end
     end
+    
+    admin.tag.index[:thead].delete('usage_header')
+    admin.tag.index[:tbody].delete('usage_cell')
   end
   
   def deactivate
