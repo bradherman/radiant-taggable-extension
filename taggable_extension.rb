@@ -33,8 +33,8 @@ class TaggableExtension < Radiant::Extension
       end
     end
     
-    admin.tag.index[:thead].delete('usage_header')
-    admin.tag.index[:tbody].delete('usage_cell')
+    #admin.tag.index[:thead].delete('usage_header')
+    #admin.tag.index[:tbody].delete('usage_cell')
   end
   
   def deactivate

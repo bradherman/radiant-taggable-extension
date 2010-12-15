@@ -28,8 +28,8 @@
               %td.tag-description
                 = tag.description
                 
-            /- tbody.usage_cell do
-            /  %td.tag-usage
+            - tbody.usage_cell do
+              %td.tag-usage
             /    = link_to "#{tag.use_count} #{pluralize(tag.use_count.to_i, 'item')}", admin_tag_url(tag)
             /- if tag.use_count.to_i > 0
             /    - else
